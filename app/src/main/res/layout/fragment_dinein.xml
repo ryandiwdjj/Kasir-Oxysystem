@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/broken_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_menu"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="201dp"
+            android:layout_marginEnd="@dimen/menu_marginEnd"
+            android:background="@drawable/ripple_effect"
+            android:backgroundTint="@color/gray">
+
+            <LinearLayout
+                android:id="@+id/new_order_dineIn"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ripple_effect"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:src="@drawable/splash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="New Order"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="201dp"
+            android:layout_marginEnd="@dimen/menu_marginEnd"
+            android:background="@drawable/ripple_effect"
+            android:backgroundTint="@color/gray">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ripple_effect"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:src="@drawable/splash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Open Order"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="201dp"
+            android:layout_marginEnd="@dimen/menu_marginEnd"
+            android:background="@drawable/ripple_effect"
+            android:backgroundTint="@color/gray">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ripple_effect"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:src="@drawable/splash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Pay Out"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="201dp"
+            android:background="@drawable/ripple_effect"
+            android:backgroundTint="@color/gray">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ripple_effect"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:src="@drawable/splash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Reprint"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="201dp"
+            android:layout_marginEnd="@dimen/menu_marginEnd"
+            android:background="@drawable/ripple_effect"
+            android:backgroundTint="@color/gray">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ripple_effect"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:src="@drawable/splash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Retur"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="201dp"
+            android:layout_marginEnd="@dimen/menu_marginEnd"
+            android:background="@drawable/ripple_effect"
+            android:backgroundTint="@color/gray">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ripple_effect"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:src="@drawable/splash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Split Bill"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="201dp"
+            android:layout_marginEnd="@dimen/menu_marginEnd"
+            android:background="@drawable/ripple_effect"
+            android:backgroundTint="@color/gray">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ripple_effect"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:src="@drawable/splash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Guide Payment"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="201dp"
+            android:layout_height="201dp"
+            android:background="@drawable/ripple_effect"
+            android:backgroundTint="@color/gray">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/ripple_effect"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="125dp"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:src="@drawable/splash" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Summary"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

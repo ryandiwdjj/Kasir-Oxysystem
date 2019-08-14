@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dine_in_menu"
+        android:title="DINE IN"/>
+
+    <item
+        android:id="@+id/take_away_menu"
+        android:title="TAKE AWAY"/>
+
+    <item
+        android:id="@+id/reservation_menu"
+        android:title="RESERVATION"/>
+</menu>

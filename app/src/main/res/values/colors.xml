@@ -4,9 +4,9 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="blue_bg">#497e8f</color>
     <color name="blue_btn">#44a6fc</color>
-    <color name="blue_banner">#2200ff</color>
+    <color name="blue_bg">#497e8f</color>
+    <color name="blue_nav">#3d5c78</color>
 
     <color name="green_av">#00e855</color>
 
@@ -16,5 +16,6 @@
     <color name="white">#ffffff</color>
     <color name="broken_white">#DDD</color>
     <color name="gray">#808080</color>
+    <color name="shadow">#8888</color>
     <color name="black">#222</color>
 </resources>
