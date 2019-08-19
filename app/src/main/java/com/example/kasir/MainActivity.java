@@ -1,8 +1,7 @@
 package com.example.kasir;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.support.v4.view.GravityCompat;
@@ -15,10 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
-import Fragment.DineInFragment;
-import Fragment.MenuFragment;
-import Fragment.ReservationFragment;
-import Fragment.TakeAwayFragment;
+import Frag.ClosingFragment;
+import Frag.DI_NewOrderFragment;
+import Frag.MenuFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,7 +39,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         fragmentManager.beginTransaction()
-                .replace(R.id.frag_container, new MenuFragment()).commit();
+                .replace(R.id.frag_container, new MenuFragment(), "menu").commit();
 
     }
 
@@ -50,18 +48,20 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+
         } else {
-            int count = getSupportFragmentManager().getBackStackEntryCount();
 
-            Log.d("getBackStack", String.valueOf(count));
+            Fragment f = getSupportFragmentManager().findFragmentById(R.id.frag_container);
 
-            if (count == 0) {
-                super.onBackPressed();
-                //additional code
-            } else {
+            if(f instanceof MenuFragment) {
+                //close aplication
+                Log.d("current fragment", "yeye");
+            }
+            else if(f instanceof DI_NewOrderFragment) {
                 getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_top)
                         .replace(R.id.frag_container, new MenuFragment())
+                        .addToBackStack(null)
                         .commit();
             }
         }
@@ -101,6 +101,10 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_sync) {
 
         } else if (id == R.id.nav_closing) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.frag_container, new ClosingFragment())
+                    .addToBackStack(null)
+                    .commit();
 
         } else if (id == R.id.action_settings) {
 

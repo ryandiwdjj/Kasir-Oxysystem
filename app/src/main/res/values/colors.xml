@@ -8,10 +8,8 @@
     <color name="blue_bg">#497e8f</color>
     <color name="blue_nav">#3d5c78</color>
 
-    <color name="green_av">#00e855</color>
-
-    <color name="red_unav">#ff6969</color>
-    <color name="red_btn">#e63939</color>
+    <color name="green_btn">#00e855</color>
+    <color name="red_btn">#ff6969</color>
 
     <color name="white">#ffffff</color>
     <color name="broken_white">#DDD</color>

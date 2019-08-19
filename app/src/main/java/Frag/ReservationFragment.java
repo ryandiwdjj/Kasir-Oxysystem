@@ -1,4 +1,4 @@
-package Fragment;
+package Frag;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 
 import com.example.kasir.R;
 
-public class TakeAwayFragment extends Fragment {
+public class ReservationFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_takeaway, container, false);
+        View v = inflater.inflate(R.layout.fragment_reservation, container, false);
 
         return v;
     }

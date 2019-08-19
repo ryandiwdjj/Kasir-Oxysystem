@@ -1,8 +1,9 @@
-package Fragment;
+package Frag;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,15 +15,13 @@ import android.widget.Toast;
 
 import com.example.kasir.R;
 
-import java.lang.reflect.Array;
-
-public class NewOrderFragment extends Fragment {
+public class DI_NewOrderFragment extends Fragment {
     String[] lantai = {"Lantai 1", "Lantai 2", "Lantai 3"};
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_neworder, container, false);
+        View v = inflater.inflate(R.layout.fragment_di_neworder, container, false);
 
         Spinner spin = (Spinner) v.findViewById(R.id.floor_spnr);
         ArrayAdapter aa = new ArrayAdapter(getActivity(),R.layout.spinner_lantai, lantai);
@@ -38,6 +37,14 @@ public class NewOrderFragment extends Fragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        v.findViewById(R.id.table_test_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment dialog = new Dialog_Frag.NewOrderDetailsDialogFragment();
+                dialog.show(getFragmentManager(), "newOrderDetails");
             }
         });
 

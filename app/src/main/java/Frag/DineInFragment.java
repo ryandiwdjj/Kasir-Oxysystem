@@ -1,4 +1,4 @@
-package Fragment;
+package Frag;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -21,7 +21,7 @@ public class DineInFragment extends Fragment {
                     public void onClick(View v) {
                         getFragmentManager().beginTransaction()
                                 .setCustomAnimations(R.anim.enter_from_top, R.anim.exit_to_bottom)
-                                .replace(R.id.frag_container, new NewOrderFragment())
+                                .replace(R.id.frag_container, new DI_NewOrderFragment(), "new_order")
                                 .addToBackStack(null)
                                 .commit();
                     }

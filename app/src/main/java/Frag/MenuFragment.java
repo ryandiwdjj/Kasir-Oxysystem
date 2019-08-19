@@ -1,4 +1,4 @@
-package Fragment;
+package Frag;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -34,7 +34,7 @@ public class MenuFragment extends Fragment {
                     Log.d("navigation", "dine in");
                     fragmentManager.beginTransaction()
                             .setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_top)
-                            .replace(R.id.menu_frag_container, new DineInFragment())
+                            .replace(R.id.menu_frag_container, new DineInFragment(), "dine_in")
                             .addToBackStack(null)
                             .commit();
                 }
@@ -42,7 +42,7 @@ public class MenuFragment extends Fragment {
                     Log.d("navigation", "take away");
                     fragmentManager.beginTransaction()
                             .setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_top)
-                            .replace(R.id.menu_frag_container, new TakeAwayFragment())
+                            .replace(R.id.menu_frag_container, new TakeAwayFragment(), "take_away")
                             .addToBackStack(null)
                             .commit();
                 }
@@ -50,7 +50,7 @@ public class MenuFragment extends Fragment {
                     Log.d("navigation", "reservation");
                     fragmentManager.beginTransaction()
                             .setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_top)
-                            .replace(R.id.menu_frag_container, new ReservationFragment())
+                            .replace(R.id.menu_frag_container, new ReservationFragment(), "reservation")
                             .addToBackStack(null)
                             .commit();
                 }
