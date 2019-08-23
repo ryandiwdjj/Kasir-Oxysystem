@@ -1,5 +1,6 @@
 package Dialog_Frag;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,7 +17,7 @@ import android.widget.Toast;
 import com.example.kasir.MenuActivity;
 import com.example.kasir.R;
 
-public class NewOrderDetailsDialogFragment extends DialogFragment {
+public class NewOrder_Details_Dialog extends DialogFragment {
 
     String [] waiter = {"Bambang", "Sukija", "Melati", "Mawar", "Suyoto"};
     Spinner waiter_spnr;
@@ -55,5 +56,13 @@ public class NewOrderDetailsDialogFragment extends DialogFragment {
         });
 
         return v;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        int width = (int)(getResources().getDisplayMetrics().widthPixels*0.6);
+
+        getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
     }
 }

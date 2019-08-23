@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.kasir.R;
 
+import Dialog_Frag.NewOrder_Details_Dialog;
+
 public class DI_NewOrderFragment extends Fragment {
     String[] lantai = {"Lantai 1", "Lantai 2", "Lantai 3"};
 
@@ -43,11 +45,15 @@ public class DI_NewOrderFragment extends Fragment {
         v.findViewById(R.id.table_test_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DialogFragment dialog = new Dialog_Frag.NewOrderDetailsDialogFragment();
+                int width = (int)(getResources().getDisplayMetrics().widthPixels*0.90);
+                int height = (int)(getResources().getDisplayMetrics().heightPixels*0.90);
+
+                DialogFragment dialog = new NewOrder_Details_Dialog();
                 dialog.show(getFragmentManager(), "newOrderDetails");
             }
         });
 
         return v;
     }
+
 }

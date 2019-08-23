@@ -14,7 +14,7 @@ public class ClosingFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_reservation, container, false);
+        View v = inflater.inflate(R.layout.fragment_closing, container, false);
 
         return v;
     }
