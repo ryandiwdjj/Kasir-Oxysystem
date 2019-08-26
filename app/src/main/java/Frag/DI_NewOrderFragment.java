@@ -55,5 +55,4 @@ public class DI_NewOrderFragment extends Fragment {
 
         return v;
     }
-
 }

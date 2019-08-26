@@ -52,6 +52,7 @@ public class NewOrder_Details_Dialog extends DialogFragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), MenuActivity.class));
+                dismiss();
             }
         });
 
@@ -65,4 +66,6 @@ public class NewOrder_Details_Dialog extends DialogFragment {
 
         getDialog().getWindow().setLayout(width, ViewGroup.LayoutParams.WRAP_CONTENT);
     }
+
+
 }
