@@ -1,6 +1,9 @@
 package com.example.kasir;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
@@ -13,18 +16,21 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.Toast;
 
 import Frag.ClosingFragment;
-import Frag.DI_NewOrderFragment;
 import Frag.MenuFragment;
+import eltos.simpledialogfragment.SimpleDialog;
+import eltos.simpledialogfragment.input.SimplePinDialog;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, SimpleDialog.OnDialogResultListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -57,7 +63,7 @@ public class MainActivity extends AppCompatActivity
                 //close aplication
                 Log.d("current fragment", "yeye");
             }
-            else if(f instanceof DI_NewOrderFragment) {
+            else {
                 getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_top)
                         .replace(R.id.frag_container, new MenuFragment())
@@ -82,7 +88,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.lock_btn) {
+            SimpleDialog.build().title("Lock this Device")
+                .msg("Are you sure?")
+                .pos("Yes")
+                .neg("No")
+                .show(MainActivity.this);
             return true;
         }
 
@@ -106,7 +117,8 @@ public class MainActivity extends AppCompatActivity
                     .addToBackStack(null)
                     .commit();
 
-        } else if (id == R.id.action_settings) {
+        } else if (id == R.id.lock_btn) {
+
 
         } else if (id == R.id.nav_exit) {
 
@@ -114,6 +126,31 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
         return true;
+    }
+
+    @Override
+    public boolean onResult(@NonNull String dialogTag, int which, @NonNull Bundle extras) {
+        if(dialogTag.equals(SimpleDialog.TAG)) {
+            switch (which){
+                case BUTTON_POSITIVE:
+                    SimplePinDialog.build().title("Unlock this device")
+                            .length(4)
+                            .cancelable(false)
+                            .pin(getString(R.string.auth_pin))
+                            .show(MainActivity.this, "pin");
+
+                    break;
+                case BUTTON_NEGATIVE:
+                    break;
+            }
+        }
+        else if(dialogTag.equals(SimplePinDialog.PIN)) {
+            if(extras.getString(SimplePinDialog.PIN).equals(getString(R.string.auth_pin))) {
+                Toast.makeText(getApplicationContext(), "Success Authenticate", Toast.LENGTH_SHORT).show();
+            }
+        }
+        return false;
     }
 }

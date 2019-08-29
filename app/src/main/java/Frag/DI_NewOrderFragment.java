@@ -1,5 +1,6 @@
 package Frag;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.kasir.PaymentActivity;
 import com.example.kasir.R;
 
 import Dialog_Frag.NewOrder_Details_Dialog;
@@ -50,6 +52,13 @@ public class DI_NewOrderFragment extends Fragment {
 
                 DialogFragment dialog = new NewOrder_Details_Dialog();
                 dialog.show(getFragmentManager(), "newOrderDetails");
+            }
+        });
+
+        v.findViewById(R.id.payment_test_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), PaymentActivity.class));
             }
         });
 

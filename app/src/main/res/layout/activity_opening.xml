@@ -43,10 +43,12 @@
 
             <EditText
                 android:id="@+id/date_etxt"
+                android:paddingStart="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginStart="30dp"
-                android:background="@color/white"
+                android:background="@drawable/rounded_border"
+                android:backgroundTint="@color/white"
                 android:textColor="@color/black"
                 android:textSize="25dp" />
 
@@ -75,8 +77,10 @@
                 <Spinner
                     android:id="@+id/shift_spnr"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@color/white"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/white"
                     android:textSize="25dp">
 
                 </Spinner>
@@ -98,29 +102,31 @@
                     android:text="Input Amount"
                     android:textSize="30dp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/amount_etxt"
                         android:gravity="end"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:layout_weight="0.1"
-                        android:background="@color/white"
+                        android:background="@drawable/rounded_border"
+                        android:backgroundTint="@color/white"
                         android:inputType="number"
                         android:textSize="25dp" />
 
                     <ImageButton
                         android:id="@+id/backspace_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="@color/blue_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="30dp"
+                        android:background="@drawable/rounded_border_right"
+                        android:layout_alignTop="@+id/amount_etxt"
+                        android:layout_alignBottom="@+id/amount_etxt"
+                        android:layout_alignRight="@+id/amount_etxt"
                         android:src="@drawable/ic_backspace" />
-                </LinearLayout>
+                </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"

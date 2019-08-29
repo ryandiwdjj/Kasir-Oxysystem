@@ -251,12 +251,26 @@
             android:layout_weight="0.7"
             android:orientation="vertical">
 
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:layout_height="1dp">
+
+            </View>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
                 android:padding="10dp"
                 android:text="Clear Sale"
                 android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:layout_height="1dp">
+
+            </View>
 
             <LinearLayout
                 android:layout_width="match_parent"

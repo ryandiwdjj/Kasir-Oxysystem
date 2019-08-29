@@ -2,13 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/dine_in_menu"
+        android:icon="@drawable/ic_dine_in"
         android:title="DINE IN"/>
 
     <item
         android:id="@+id/take_away_menu"
+        android:icon="@drawable/ic_take_away"
         android:title="TAKE AWAY"/>
 
     <item
         android:id="@+id/reservation_menu"
+        android:icon="@drawable/ic_reservation"
         android:title="RESERVATION"/>
 </menu>

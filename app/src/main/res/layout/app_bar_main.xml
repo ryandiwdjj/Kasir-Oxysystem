@@ -19,8 +19,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/blue_btn"
             app:title="OxyResto"
-            app:titleTextAppearance="@style/TitleText"
-            app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen.PopupOverlay" />
+            app:titleTextAppearance="@style/TitleText" />
 
     </android.support.design.widget.AppBarLayout>
 

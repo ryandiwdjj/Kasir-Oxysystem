@@ -11,9 +11,10 @@
     <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:statusBarColor">@android:color/black</item>
     </style>
 
     <style name="Theme.AppCompat.Light.NoActionBar.FullScreen.NoActionBar">
@@ -21,9 +22,13 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+
+    </style>
 
     <style name="TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">27sp</item>

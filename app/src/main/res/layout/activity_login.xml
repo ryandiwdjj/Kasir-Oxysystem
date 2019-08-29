@@ -35,6 +35,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="flagNoExtractUi"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
             android:textSize="@dimen/text_size"
             android:hint="Username"
             android:inputType="text"/>
@@ -53,6 +56,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="flagNoExtractUi"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
             android:textSize="@dimen/text_size"
             android:hint="Password"
             android:inputType="textPassword"/>

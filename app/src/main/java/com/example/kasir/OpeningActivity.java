@@ -71,9 +71,11 @@ public class OpeningActivity extends AppCompatActivity implements View.OnClickLi
             }
         });
 
-        shift_spnr = findViewById(R.id.shift_spnr);
+
         ArrayAdapter aa = new ArrayAdapter(getApplicationContext(), R.layout.spinner_shift, shift);
         aa.setDropDownViewResource(R.layout.spinner_shift_dropdown);
+
+        shift_spnr = findViewById(R.id.shift_spnr);
         shift_spnr.setAdapter(aa);
         shift_spnr.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
