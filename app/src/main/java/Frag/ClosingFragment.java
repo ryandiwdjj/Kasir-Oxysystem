@@ -27,6 +27,17 @@ public class ClosingFragment extends Fragment implements SimpleDialog.OnDialogRe
                 .pin(getString(R.string.auth_pin))
                 .show(this, "pin");
 
+        v.findViewById(R.id.cancel_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_top)
+                        .replace(R.id.frag_container, new MenuFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
         return v;
     }
 

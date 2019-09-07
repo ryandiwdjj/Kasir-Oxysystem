@@ -62,6 +62,7 @@ public class OpeningActivity extends AppCompatActivity implements View.OnClickLi
         DateFormat df = new SimpleDateFormat("EEEE, dd-MMM-yyyy | kk:mm");
 
         date_etxt = findViewById(R.id.date_etxt);
+        date_etxt.setEnabled(false);
         date_etxt.setText(df.format(Calendar.getInstance().getTime()));
 
         findViewById(R.id.save_btn).setOnClickListener(new View.OnClickListener() {

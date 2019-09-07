@@ -11,13 +11,18 @@
         android:layout_height="wrap_content"
         android:text="Closing"
         android:textStyle="bold"
-        android:textSize="40sp" />
+        android:textSize="30dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="0.3"
+        android:layout_height="match_parent"
+        android:paddingVertical="@dimen/padding_menu">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingHorizontal="20dp"
-        android:layout_weight="0.3"
         android:orientation="vertical">
 
         <LinearLayout
@@ -30,14 +35,14 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Opening"/>
 
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="100.000"/>
 
@@ -53,14 +58,14 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Total Transaction"/>
 
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="124.740"/>
 
@@ -76,14 +81,14 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Service"/>
 
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="5.400"/>
         </LinearLayout>
@@ -98,14 +103,14 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Tax"/>
 
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="11.340"/>
         </LinearLayout>
@@ -119,13 +124,13 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Discount"/>
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="2.000"/>
         </LinearLayout>
@@ -139,13 +144,13 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Total Cash"/>
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="124.740"/>
         </LinearLayout>
@@ -159,13 +164,13 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Total Credit Card"/>
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="0"/>
         </LinearLayout>
@@ -179,13 +184,13 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Total Debit Card"/>
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="0"/>
         </LinearLayout>
@@ -199,13 +204,13 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Voucher"/>
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="0"/>
         </LinearLayout>
@@ -219,18 +224,19 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:text="Transfer"/>
             <TextView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="@dimen/text_closing"
                 android:textAlignment="textEnd"
                 android:text="0"/>
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -249,11 +255,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/cancel_btn"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/rounded_border"
@@ -261,6 +269,7 @@
                 android:text="Cancel"/>
 
             <Button
+                android:id="@+id/save_btn"
                 android:layout_marginStart="50dp"
                 android:layout_width="200dp"
                 android:background="@drawable/rounded_border"

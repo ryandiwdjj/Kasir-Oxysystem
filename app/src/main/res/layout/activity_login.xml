@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OxyResto"
-        android:textSize="60dp"/>
+        android:textSize="40dp"/>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/username_etxt_layout"

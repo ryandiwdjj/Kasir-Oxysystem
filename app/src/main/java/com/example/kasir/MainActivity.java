@@ -25,11 +25,14 @@ import eltos.simpledialogfragment.input.SimplePinDialog;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, SimpleDialog.OnDialogResultListener {
+    Fragment f;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        f = getSupportFragmentManager().findFragmentById(R.id.frag_container);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,13 +60,9 @@ public class MainActivity extends AppCompatActivity
 
         } else {
 
-            Fragment f = getSupportFragmentManager().findFragmentById(R.id.frag_container);
-
-            if(f instanceof MenuFragment) {
+            if(!(f instanceof MenuFragment)) {
                 //close aplication
                 Log.d("current fragment", "yeye");
-            }
-            else {
                 getSupportFragmentManager().beginTransaction()
                         .setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_top)
                         .replace(R.id.frag_container, new MenuFragment())
@@ -104,9 +103,18 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        f = getSupportFragmentManager().findFragmentById(R.id.frag_container);
         int id = item.getItemId();
 
         if (id == R.id.nav_pos) {
+            if(!(f instanceof MenuFragment)) {
+                Log.d("current fragment", "yeye");
+                getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.enter_from_bottom, R.anim.exit_to_top)
+                        .replace(R.id.frag_container, new MenuFragment())
+                        .addToBackStack(null)
+                        .commit();
+            }
         } else if (id == R.id.nav_kitchen) {
 
         } else if (id == R.id.nav_sync) {
